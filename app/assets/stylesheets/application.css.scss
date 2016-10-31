@@ -1,0 +1,148 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "font-awesome";
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, textarea, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'PT Sans';
+    color: rgb(64, 64, 64);
+}
+body {
+  background-color: rgb(250, 250, 250);
+}
+div {
+  background-color: rgb(255, 255, 255);
+}
+textarea {
+  width: 65%;
+  outline: none;
+  border: none;
+  resize: none;
+}
+input {
+  background-color: rgb(255, 255, 255);
+  width: 10%;
+  padding: 1%;
+  border: 1px solid rgba(64, 64, 64, 0.3);
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(64, 64, 64, 0.3);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.button-set {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+span {
+  font-size: 1.15em;
+}
+img.profile {
+  border-radius: 50px;
+}
+.main-container {
+  margin: 5% 10%;
+  background-color: rgb(250, 250, 250);
+}
+.link {
+  margin: 2% 0; 
+  width: 60%;
+  padding: 2%;
+  border: 1px solid rgba(64, 64, 64, 0.2);
+}
+.header-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.action-meta {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.75em;
+  margin-top: 2%;
+}
+.action-meta i {
+  margin-right: 5%;
+}
+.action-meta span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 2%;
+}
+span.count {
+  font-size: 0.85em;
+  margin-left: 5%;
+  font-weight: 700;
+}
+.comments {
+  padding-top: 2.5%;
+}
+.show-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  padding: 2%;
+  border: 1px solid rgba(64, 64, 64, 0.2);
+}
+.comment {
+  margin: 2% 0;
+  width: 60%;
+  padding: 2%;
+  border: 1px solid rgba(64, 64, 64, 0.2);
+}
+.comment-field {
+  margin: 2% 0; 
+  width: 60%;
+  padding: 2%;
+  border: 1px solid rgba(64, 64, 64, 0.2);
+  // background-color: rgb(250, 250, 250);
+}
+
+
+
+
+
+
+
+
+
+
