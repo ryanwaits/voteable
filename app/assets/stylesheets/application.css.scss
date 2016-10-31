@@ -136,7 +136,24 @@ span.count {
   border: 1px solid rgba(64, 64, 64, 0.2);
   // background-color: rgb(250, 250, 250);
 }
-
+#clearance {
+  margin-top: 2.5%;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+}
+.field {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+.field input {
+  width: 35%;
+  margin: 2%;
+}
+.field a {
+  margin-right: 2%;
+  text-align: center;
+}
 
 
 
