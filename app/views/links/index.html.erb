@@ -1,0 +1,86 @@
+<div class="main-container">
+  <% @links.each do |link| %>
+  <div class="link">
+    <div class="header-meta">
+      <span style="margin-right: 1%;"><img class="profile" src="https://cdn-images-1.medium.com/fit/c/32/32/0*L7WQbejWZTmPdX6Q.jpeg" alt=""></span>
+      <h1><%= link_to link.title, link_path(link) %></h1>
+    </div>
+    <p>posted by <%= link.user.username %> about <%= time_ago_in_words(link.created_at) %></p>
+    <div class="action-meta">
+      <span>
+        <i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i><%= link_to 'Upvote', like_link_path(link), method: :put %>
+        <span class="count">(<%= link.get_upvotes.size %>)</span>
+      </span>
+      <span>
+        <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i><%= link_to 'Downvote', dislike_link_path(link), method: :put %>
+        <span class="count">(<%= link.get_downvotes.size %>)</span>
+      </span>
+    </div>
+    <div class="comments">
+      <h4><%= link_to "Comments ( #{link.comments.count} )", link_path(link) %></h4>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+  <div class="column">
+    <div class="ui items">
+      <% @links.each do |link| %>
+      <div class="item">
+        <div class="image">
+          <img src="https://cdn-images-1.medium.com/max/2000/1*AYLTriU8qWBS9zaR2BBAQA.jpeg">
+        </div>
+        <div class="content">
+          <h3 class="header"><%= link_to link.title, "#{link.url}", target: '_blank' %></h3>
+          <div class="meta">
+            <span>
+              <div class="ui label" style="padding: 1.5%;">
+                <i class="fa fa-arrow-circle-up" aria-hidden="true"></i></i> <span><%= link_to 'Upvote', like_link_path(link), method: :put %></span><span><%= link.get_upvotes.size %></span>
+              </div>
+            </span>
+            <span>
+              <div class="ui label" style="padding: 1.5%;">
+                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> <span><%= link_to 'Downvote', dislike_link_path(link), method: :put %></span><span><%= link.get_downvotes.size %></span>
+              </div>
+            </span>
+          </div>
+          <div class="extra">
+            submitted <%= time_ago_in_words(link.created_at) %> ago by <%= link.user.username %>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h3 class="header"><%= link.comments.count %> Comments</h3>
+        <div class="meta">
+          <span><%= render partial: link.comments %></span>
+        </div>
+        <div class="container" style="width: 35%;">
+          <div class="ui form" style="margin-top: 1.5%;">
+            <%= simple_form_for [link, Comment.new] do |f| %>
+              <%= f.text_area :body, rows: '2', placeholder: 'Comment' %>
+              <%= f.submit :submit, class: 'ui basic button' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+      <% end %>
+    </div>
+  </div>
+</div> -->

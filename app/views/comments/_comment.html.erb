@@ -1,0 +1,4 @@
+<%= div_for(comment) do %>
+    <p><%= comment.body %></p>
+    <p style="font-weight: 700;">submitted <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.username %></p>
+<% end %>
