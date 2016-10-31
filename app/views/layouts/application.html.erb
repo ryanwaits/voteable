@@ -9,19 +9,29 @@
   </head>
 
   <body>
-    <% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-      <%= button_to 'Sign out', sign_out_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign in', sign_in_path %>
-    <% end %>
-
     <div id="flash">
       <% flash.each do |key, value| %>
         <div class="flash <%= key %>"><%= value %></div>
       <% end %>
     </div>
 
+    <header>
+      <div class="header-container">
+        <span class="left"><%= link_to 'Feed', root_path %></span>
+        <div class="button-set">
+          <span class="right"><%= link_to 'Publish a story', new_link_path %></span>
+          <span class="right"><i class="fa fa-bell-o" aria-hidden="true"></i></span>
+          <% if signed_in? %>
+            <span class="right"><%= link_to 'Sign out', sign_out_path, method: :delete %></span>
+          <% else %>
+            <span class="right"><%= link_to 'Sign in', sign_in_path %></span>
+          <% end %>
+          <span class="right"><img class="profile" src="https://cdn-images-1.medium.com/fit/c/32/32/0*L7WQbejWZTmPdX6Q.jpeg" alt=""></span>
+        </div>
+      </div>
+    </header>
+
     <%= yield %>
+
   </body>
 </html>
